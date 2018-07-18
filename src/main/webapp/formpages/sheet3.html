@@ -1,0 +1,1225 @@
+
+<html>
+<head>
+    <title>道路运输安全生产考核与评价系统</title>
+    <!-- mobile apps -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Fascinating Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+	SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //mobile apps -->
+    <!-- Custom Theme files -->
+    <link rel="shortcut icon" href="images/logtitle.ico">
+    <link href="css/bootstrap.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/bootstrap-table.css" type="text/css" rel="stylesheet" media="all">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+    <!-- //Custom Theme files -->
+    <!-- js -->
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <!-- //js -->
+    <!-- web-fonts -->
+    <link href='//fonts.googleapis.com/css?family=Buda:300' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <!-- //web-fonts -->
+    <!-- start-smooth-scrolling -->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event){
+                event.preventDefault();
+
+                $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+            });
+        });
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/tab/raccordion.css" />
+    <script type="text/javascript">
+        $(window).load(function () {
+            $('#accordion-wrapper').raccordion({
+                speed: 1000,
+                sliderWidth: 700,
+                sliderHeight: 300,
+                autoCollapse: false
+            });
+        });
+    </script>
+    <!--skycons-icons-->
+    <script src="js/skycons.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap-table.js"></script>
+    <script src="js/bootstrap-table-zh-CN.min.js"></script>
+    <script src="js/jquery.raccordion.js" type="text/javascript"></script>
+    <script src="js/jquery.animation.easing.js" type="text/javascript"></script>
+    <!-- //end-smooth-scrolling -->
+</head>
+<body>
+<div style="z-index:10;width:100px;height:100px;position:fixed;bottom: 0;left: 3%;">
+    <button onclick="goBack()" style="width: 50px;height: 50px;border: 1px solid GrayText;border-radius: 100%; margin-top: 25px;">返回</button>
+</div>
+<!-- banner -->
+<div class="banner">
+    <div class="banner-info" >
+        <div class="banner-top">
+            <div class="container">
+                <div class="banner-top-grids banner-top-left" style="width: 20%">
+                    <ul class="social-icons">
+                        <li style="color: white;"></li>
+                        <li style="color: white;"></li>
+                        <li style="color: white;"></li>
+                    </ul>
+                </div>
+                <div class="banner-top-grids banner-logo" style="width: 60%">
+                    <a href="javascript:void(0)">
+                        <div class="img-top-div"><img src="images/1.png" alt=""/></div>
+                        <h1>道路运输安全生产考核与评价系统<span id="top-span">新乡市道路运输管理局</span></h1>
+                    </a>
+                </div>
+                <div class="w3ls-row alert" style="margin-top: 8em;margin-bottom: 3em;">
+                    <div class="col-md-6 welcome-right" style="box-shadow: 0 0 1px 1px transparent;">
+                        <h4 style="color: white;padding-left: 6.5em;text-indent: -6.5em;">公司名称&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;：<span id="unit_name" style="margin-left: 0.1em">河南省爱在路上货运有限公司</span></h4>
+                        <h4 style="color: white;">车辆牌照&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;：<span id="car_license_plate" style="margin-left: 0.1em">豫J3306</span></h4>
+                    </div>
+                    <div class="col-md-6 welcome-right" style="box-shadow: 0 0 1px 1px transparent;">
+                        <h4 style="color: white;">评分日期&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;：<span id="date">2018年6月14日</span> </h4>
+                        <h4 style="color: white;">风险评级&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;：<span id="RAI_grade">五级</span> </h4>
+                        <a href="javascript:void(0)" id="RAI" class="more" style="float: right;">风险指数：<span id="RAI_index" style="font-size: 18px;">83%</span></a>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //banner -->
+<!-- welcome -->
+<div class="welcome" style="padding: 3em 0;">
+    <div class="container">
+        <div class="title" style="padding: 2em 0;margin-bottom: 1em;">
+            <h3>静态数据分析结果</h3>
+            <p> </p>
+        </div>
+        <div class="clearfix"> </div>
+        <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs" style="margin: 3em 0;">
+            <ul id="myTab" class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">车辆数据</a></li>
+                <li role="presentation"><a href="#user" role="tab" id="user-tab" data-toggle="tab" aria-controls="user">驾驶人数据</a></li>
+                <li role="presentation"><a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">运输数据</a></li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+                <div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
+                    <div class="bs-docs-example ">
+                        <table class="table table-bordered">
+                            <tbody>
+                            <tr>
+                                <td class="active">车辆号牌</td>
+                                <td id="unitcar_car_license_plate"></td>
+                                <td class="active">车辆入户日期</td>
+                                <td id="unitcar_home_date"></td>
+                                <td colspan="2" class="active">截止上月底累计行驶公里数</td>
+                                <td id="unitcar_travel_kilometers"></td>
+                            </tr>
+                            <tr>
+                                <td class="active">其他参数</td>
+                                <td id="unitcar_transport_type"></td>
+                                <td id="unitcar_car_brand"></td>
+                                <td id="unitcar_axle_number"></td>
+                                <td id="unitcar_transportation_capacity"></td>
+                                <td id="unitcar_displacement"></td>
+                                <td id="unitcar_gear_box"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="user" aria-labelledby="user-tab">
+                    <div class="bs-docs-example ">
+                        <table  data-pagination="true" id="car_user_table" class="table table-bordered">
+                            <thead>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
+                    <div class="bs-docs-example ">
+                        <table class="table table-bordered">
+                            <tbody>
+                            <tr>
+                                <td class="active">燃油类型</td>
+                                <td id="unitcar_item_type"></td>
+                                <td class="active">核载</td>
+                                <td id="unitcar_real_load"></td>
+                                <td class="active">运输形式</td>
+                                <td id="unitcar_transport_mode">拖挂</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"> </div>
+        <div id="staticView" style="width: auto;height: 350px;"></div>
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!-- //welcome -->
+<!-- slid -->
+<div class="slid banner banner-top" style="min-height:100px;">
+    <div class="container" style="width: 95%">
+        <section class="slider">
+            <div class="flexslider">
+                <div class="title" style="padding: 2em 0;margin-bottom: 1em;">
+                    <h3 style="color: white">基于车载卫星定位数据及天气，道路等数据进行综合分析</h3>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </section>
+    </div>
+</div>
+<!-- //slid -->
+<!-- latest -->
+<div class="latest">
+    <div class="container">
+        <div class="title" style="padding: 2em 0;margin-bottom: 1em;">
+            <h3>动态数据分析结果</h3>
+            <p> </p>
+        </div>
+        <div class="clearfix" style="margin-top: 3em;"> </div>
+        <!--<%&#45;&#45;<div class="page-header ">-->
+        <!--<h3 class="hdg">行驶路线数据分析</h3>-->
+    <!--</div>-->
+        <!--<div class="w3ls-row">-->
+            <!--<div class="col-sm-12 col-md-12  w3latest-grids">-->
+                <!--<table id="road"-->
+                       <!--class="table-striped">-->
+                    <!--<thead>-->
+                    <!--<tr class="active">-->
+                        <!--<th data-field="qidian">起点</th>-->
+                        <!--<th data-field="zhongdian">终点</th>-->
+                        <!--<th data-field="licheng">总里程数</th>-->
+                        <!--<th data-field="guodao">高速里程数</th>-->
+                        <!--<th data-field="chengshi">城市里程数</th>-->
+                        <!--<th data-field="tianqi">天气情况</th>-->
+                        <!--<th data-field="shijian">起止时间</th>-->
+                    <!--</tr>-->
+                    <!--</thead>-->
+                <!--</table>-->
+            <!--</div>-->
+            <!--<div class="clearfix"> </div>-->
+        <!--</div>-->
+        <!--<div class="clearfix" style="margin-top: 3em;"> </div>&#45;&#45;%>-->
+        <div class="page-header ">
+            <h3 class="hdg">高危行为数据及风险分析</h3>
+        </div>
+        <!--<%&#45;&#45;<div id="clam" style="text-align: center" ><h4>暂无分析数据！</h4></div>&#45;&#45;%>-->
+        <!--<%&#45;&#45;违法&#45;&#45;超速&#45;&#45;%>-->
+        <div id="speeding_illegal">
+            <ol class="breadcrumb">
+                <li><a href="#">高危行为数据及风险分析</a></li>
+                <li class="active">高危超速违法</li>
+                <li class="active" id = "speeding_illegal_head"></li>
+            </ol>
+            <div class="w3ls-row">
+                <div class="col-sm-6 col-md-6  w3latest-grids">
+                    <p style="font-size: 1.3em;color: black;margin-top: -10px;padding-bottom: 10px;font-weight: 700">数据展示</p>
+                    <table id="speeding_illegal_table" data-pagination="true" class="table-striped">
+                        <thead>
+                        <tr>
+                            <th data-field="illegal_time">违法时间</th>
+                            <th data-field="illegal_address">违法地点</th>
+                            <th data-field="illegal_behavior">违法行为</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="col-sm-6 col-md-6  w3latest-grids">
+                    <div id="speeding_illegal_chart" style="width: 450px;height: 450px;"></div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+
+        <!--<%&#45;&#45;违法-事故构成犯罪&#45;&#45;%>-->
+        <div id="accident_constitutes_crime">
+            <ol class="breadcrumb">
+                <li><a href="#">高危行为数据及风险分析</a></li>
+                <li class="active">事故构成犯罪</li>
+                <li class="active" id = "accident_constitutes_crime_head"></li>
+            </ol>
+            <div class="w3ls-row">
+                <div class="col-sm-6 col-md-6  w3latest-grids">
+                    <p style="font-size: 1.3em;color: black;margin-top: -10px;padding-bottom: 10px;font-weight: 700">数据展示</p>
+                    <table id="accident_constitutes_crime_table" data-pagination="true" class="table-striped">
+                        <thead>
+                        <tr>
+                            <th data-field="illegal_time">违法时间</th>
+                            <th data-field="illegal_address">违法地点</th>
+                            <th data-field="illegal_behavior">违法行为</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="col-sm-6 col-md-6  w3latest-grids">
+                    <div id="accident_constitutes_crime_chart" style="width: 450px;height: 450px;"></div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+
+        <!--<%&#45;&#45;超速预警&#45;&#45;%>-->
+        <div id="speeding_alarm">
+            <ol class="breadcrumb">
+                <li><a href="#">高危行为数据及风险分析</a></li>
+                <li class="active">高危超速预警</li>
+                <li class="active" id = "speeding_alarm_head"></li>
+            </ol>
+            <div class="w3ls-row">
+                <div class="col-sm-6 col-md-6  w3latest-grids">
+                    <p style="font-size: 1.3em;color: black;margin-top: -10px;padding-bottom: 10px;font-weight: 700">数据展示</p>
+                    <table id="speeding_alarm_table" data-pagination="true" class="table-striped">
+                        <thead>
+                        <tr>
+                            <th data-field="alarm_time">时间</th>
+                            <th data-field="alarm_speed">速度</th>
+                            <th data-field="alarm_address">地点</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="col-sm-6 col-md-6  w3latest-grids">
+                    <div id="speeding_alarm_chart" style="width: 450px;height: 450px;"></div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+
+        <!--<%&#45;&#45;疲劳预警&#45;&#45;%>-->
+        <div id="fatigue_alarm">
+            <ol class="breadcrumb">
+                <li><a href="#">高危行为数据及风险分析</a></li>
+                <li class="active">高危疲劳预警</li>
+                <li class="active" id = "fatigue_alarm_head"></li>
+            </ol>
+            <div class="w3ls-row">
+                <div class="col-sm-6 col-md-6  w3latest-grids">
+                    <p style="font-size: 1.3em;color: black;margin-top: -10px;padding-bottom: 10px;font-weight: 700">数据展示</p>
+                    <table id="fatigue_alarm_table" data-pagination="true" class="table-striped">
+                        <thead>
+                        <tr>
+                            <th data-field="alarm_time">时间</th>
+                            <th data-field="alarm_speed">速度</th>
+                            <th data-field="alarm_address">地点</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="col-sm-6 col-md-6  w3latest-grids">
+                    <div id="fatigue_alarm_chart" style="width: 450px;height: 450px;"></div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+
+
+        <div class="title" style="padding: 2em 0;margin-bottom: 1em;">
+            <h3>风险提示</h3>
+            <p> </p>
+        </div>
+        <p id="msg" style="font-size: 2em"></p>
+        <br/>
+        <div class="w3ls-row">
+            <div class="col-sm-12 col-md-12  w3latest-grids">
+                <table id="risk_table"
+                       class="table-striped">
+                    <thead>
+                    <tr>
+                        <th data-field="id">序号</th>
+                        <th data-field="yijian">详细信息</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="clearfix"> </div>
+
+
+        <div class="title" style="padding: 2em 0;margin-bottom: 1em;">
+            <h3>整改意见</h3>
+            <p> </p>
+        </div>
+        <div class="w3ls-row">
+            <div class="col-sm-12 col-md-12  w3latest-grids">
+                <table id="table2"
+                       class="table-striped">
+                    <thead>
+                    <tr>
+                        <th data-field="id">序号</th>
+                        <th data-field="yijian">详细信息</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+</div>
+<!-- //latest -->
+<!-- footer -->
+<div class="footer">
+    <div class="container">
+        <div class="footer-bottom">
+            <p>© 2017 jiuqu data . All rights reserved | Design by <a href="http://w3layouts.com">jiuqu data.</a></p>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+
+    var webPath='<%=basePath%>';
+
+
+    //获取当前日期
+    var todaytime = (new Date()).getTime();
+    //超速违法
+
+    var suggest = [];
+
+    var ChoiceNum =[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
+    var ChoiceArr = [];
+
+    var ChoiceBer = false;
+
+    var ChoiceChart1 = [false];
+    var ChoiceChart2 = [false];
+    var ChoiceChart3 = [false];
+    var ChoiceChart4 = [false];
+    var ChoiceChart5 = [false];
+    var ChoiceChart6 = [false];
+    var ChoiceChart7 = [false];
+    var ChoiceChart8 = [false];
+    var ChoiceChart9 = [false];
+    var ChoiceChart10 = [false];
+    var ChoiceChart11 = [false];
+    var ChoiceChart12 = [false];
+    var ChoiceChart13 = [false];
+    var ChoiceChart14 = [false];
+    var ChoiceChart15 = [false];
+    var ChoiceChart16 = [false];
+    var ChoiceChart17 = [false];
+    var ChoiceChart18 = [false];
+    var ChoiceChart19 = [false];
+    var ChoiceChart20 = [false];
+    var ChoiceChart21 = [false];
+    var ChoiceChart22 = [false];
+    var ChoiceChart23 = [false];
+    var ChoiceChart24 = [false];
+    var ChoiceChart25 = [false];
+    var ChoiceChart26 = [false];
+    var ChoiceChart27 = [false];
+
+
+
+
+    $("#RAI_grade").html("特别重大");
+    $("#RAI_grade").css("color", "#990000");
+    $("#RAI").css("background-color", "#990000");
+
+
+$("#unitcar_car_license_plate").html("豫J3306");//车牌号
+$("#unitcar_home_date").html("2010-05-14");//车辆入户日期
+$("#unitcar_travel_kilometers").html("30");//截止上月底累计行驶公里数
+$("#unitcar_transport_type").html("暂无数据");//其他参数
+$("#unitcar_car_brand").html("暂无数据");//其他参数
+$("#unitcar_axle_number").html("暂无数据");//其他参数
+$("#unitcar_transportation_capacity").html("暂无数据");//其他参数
+$("#unitcar_displacement").html("暂无数据");//其他参数
+$("#unitcar_gear_box").html("暂无数据");//其他参数
+$("#unitcar_real_load").html("46吨");//核载
+//                            $("#unitcar_transport_mode").html();//运输形式
+$("#unitcar_item_type").html("柴油");//燃油类型
+
+var staticView = echarts.init(document.getElementById('staticView'));
+var option = {
+    tooltip: {
+        trigger: 'axis'
+    },
+    legend: {
+        data: ['日期']
+    },
+    xAxis: [
+        {
+            type: 'category',
+            data: ['车辆', '驾驶', '道路', '天气', '管理']
+        }],
+    yAxis: [
+        {
+            type: 'value',
+            name: '指数',
+            min: 0,
+            interval: 10,
+            axisLabel: {
+                formatter: '{value} '
+            }
+        }],
+    series: [{
+        name: '',
+        type: 'line',
+        itemStyle: {
+//                    /!*设置折线颜色*!/
+            normal: {
+                color: '#ff9a00'
+            }
+        },
+        data: [36,44,81,73,56],
+    }]
+};
+
+staticView.setOption(option);
+
+
+    $("#speeding_illegal_table").bootstrapTable({
+        striped: true, //表格显示条纹
+        uniqueId: "Id",
+        pagination: false, //启动分页
+        pageSize: 5, //每页显示的记录数
+        pageNumber: 1, //当前第几页
+        pageList: [5, 10, 15, 20, 25], //记录数可选列表
+        dataField: "res",//bootstrap table 可以前端分页也可以后端分页，这里
+        data: [{"search_illegal_datetime":"2018-05-13-11:33","search_illegal_address":"小杨庄东路","search_illegal_behaviour":"超速"}],
+        columns: [
+            {
+                title: '违法时间',
+                field: 'search_illegal_datetime',
+            },
+            {
+                title: '违法地点',
+                field: 'search_illegal_address'
+            },
+            {
+                title: '违法行为',
+                field: 'search_illegal_behaviour'
+            }
+        ]
+    });
+
+    var myChart = echarts.init(document.getElementById("speeding_illegal_chart"));
+    var option = {
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            data:['数据']
+        },
+        xAxis: [
+            {
+                type: 'category',
+                data: ["06:00","12:00","18:00","00:00"],
+//							interval: 0,
+                axisLabel: {
+                    interval: 0,
+                    rotate: -40
+                }
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                name: '次数',
+                min: 0,
+//                            interval: 10,
+                axisLabel: {
+                    formatter: '{value} '
+                }
+            }],
+        series: [{
+            name:'',
+            type:'line',
+            itemStyle : {
+                /*设置折线颜色*/
+                normal : {
+                    color:'#ff9a00'
+                }
+            },
+            data: [13,18,39,13]
+        }]
+    };
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+
+    $("#accident_constitutes_crime_table").bootstrapTable({
+        striped: true, //表格显示条纹
+        uniqueId: "Id",
+        pagination: false, //启动分页
+        pageSize: 5, //每页显示的记录数
+        pageNumber: 1, //当前第几页
+        pageList: [5, 10, 15, 20, 25], //记录数可选列表
+        dataField: "res",//bootstrap table 可以前端分页也可以后端分页，这里
+        data: [{"search_illegal_datetime":"2018-05-13-11:33","search_illegal_address":"小杨庄东路","search_illegal_behaviour":"事故构成犯罪"}],
+        columns: [
+            {
+                title: '违法时间',
+                field: 'search_illegal_datetime',
+            },
+            {
+                title: '违法地点',
+                field: 'search_illegal_address'
+            },
+            {
+                title: '违法行为',
+                field: 'search_illegal_behaviour'
+            }
+        ]
+    });
+
+    var myChart = echarts.init(document.getElementById("accident_constitutes_crime_chart"));
+    // 指定图表的配置项和数据
+    var option = {
+        title: {
+            text: ''
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            data: ['数据']
+        },
+        xAxis: {
+            data: ["06:00","12:00","18:00","00:00"],
+//						interval: 0,
+            rotate: -30,
+            margin:30,
+            axisLabel: {
+                interval:0,
+                rotate:-40
+            }
+        },
+        yAxis: {},
+        series: [{
+            name: '风险',
+            type: 'bar',
+            barWidth: 30,
+            data: [33,18,69,88],
+        }]
+    };
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+
+    $("#fatigue_alarm_table").bootstrapTable({
+        striped: true, //表格显示条纹
+        uniqueId: "Id",
+        pagination: false, //启动分页
+        pageSize: 5, //每页显示的记录数
+        pageNumber: 1, //当前第几页
+        pageList: [5, 10, 15, 20, 25], //记录数可选列表
+        dataField: "res",//bootstrap table 可以前端分页也可以后端分页，这里
+        data: [{"Time":"2018-05-13-13:36","SUDU":"96","DIDIAN":"国道1573"}],
+        columns: [
+            {
+                title: '时间',
+                field: 'Time',
+            },
+            {
+                title: '速度',
+                field: 'SUDU',
+                formatter: function (value, row, index) {
+                    return value + "千米/小时";
+                }
+            },
+            {
+                title: '地点',
+                field: 'DIDIAN'
+            }
+        ]
+    });
+
+    var myChart = echarts.init(document.getElementById("fatigue_alarm_chart"));
+    var option = {
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            data:['数据']
+        },
+        xAxis: [
+            {
+                type: 'category',
+                data: ["06:00","12:00","18:00","00:00"],
+//							interval: 0,
+                axisLabel: {
+                    interval: 0,
+                    rotate: -40
+                }
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                name: '次数',
+                min: 0,
+//                            interval: 10,
+                axisLabel: {
+                    formatter: '{value} '
+                }
+            }],
+        series: [{
+            name:'',
+            type:'line',
+            itemStyle : {
+                /*设置折线颜色*/
+                normal : {
+                    color:'#ff9a00'
+                }
+            },
+            data: [74,36,81,16]
+        }]
+    };
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+
+    $("#speeding_alarm_table").bootstrapTable({
+        striped: true, //表格显示条纹
+        uniqueId: "Id",
+        pagination: false, //启动分页
+        pageSize: 5, //每页显示的记录数
+        pageNumber: 1, //当前第几页
+        pageList: [5, 10, 15, 20, 25], //记录数可选列表
+        dataField: "res",//bootstrap table 可以前端分页也可以后端分页，这里
+        data: [{"Time":"2018-05-13-13:36","SUDU":"96","DIDIAN":"国道1573"}],
+        columns: [
+            {
+                title: '时间',
+                field: 'Time',
+            },
+            {
+                title: '速度',
+                field: 'SUDU',
+                formatter: function (value, row, index) {
+                    return value + "千米/小时";
+                }
+            },
+            {
+                title: '地点',
+                field: 'DIDIAN'
+            }
+        ]
+    });
+
+    var myChart = echarts.init(document.getElementById("speeding_alarm_chart"));
+    // 指定图表的配置项和数据
+    var option = {
+        title: {
+            text: ''
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        legend: {
+            data: ['数据']
+        },
+        xAxis: {
+            data: ["06:00","12:00","18:00","00:00"],
+//						interval: 0,
+            rotate: -30,
+            margin:30,
+            axisLabel: {
+                interval:0,
+                rotate:-40
+            }
+        },
+        yAxis: {},
+        series: [{
+            name: '风险',
+            type: 'bar',
+            barWidth: 30,
+            data: [18,41,29,76],
+        }]
+    };
+    // 使用刚指定的配置项和数据显示图表。
+    myChart.setOption(option);
+
+    var message = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+"车辆 "+"豫J3306"+"在安全生产中存在以下风险行为：";
+    $("#msg").html(message);
+
+    $("#risk_table").bootstrapTable({
+        striped: true, //表格显示条纹
+        uniqueId: "Id",
+        pagination: false, //启动分页
+        pageSize: 5, //每页显示的记录数
+        pageNumber: 1, //当前第几页
+        pageList: [5, 10, 15, 20, 25], //记录数可选列表
+        dataField: "res",//bootstrap table 可以前端分页也可以后端分页，这里
+        data:[{"id":1,"yijian":"高危超速违法"},
+            {"id":2,"yijian":"事故构成犯罪"},
+            {"id":3,"yijian":"高危超速预警"},
+            {"id":4,"yijian":"高危疲劳预警"},],
+        columns: [
+            {
+                title: '序号',
+                field: 'id',
+            },
+            {
+                title: '详细信息',
+                field: 'yijian',
+            },
+        ]
+    });
+
+
+    $("#table2").bootstrapTable({
+        striped: true, //表格显示条纹
+        uniqueId: "Id",
+        pagination: false, //启动分页
+        pageSize: 5, //每页显示的记录数
+        pageNumber: 1, //当前第几页
+        pageList: [5, 10, 15, 20, 25], //记录数可选列表
+        dataField: "res",//bootstrap table 可以前端分页也可以后端分页，这里
+        data:[{"id":1,"yijian":"加强出车前安全管理"},
+            {"id":2,"yijian":"加强车辆GPS全过程监控"},
+            {"id":3,"yijian":"加大对超速行为的处罚力度"},
+            {"id":4,"yijian":"搜集典型事故案例进行警示教育"},
+            {"id":5,"yijian":"坚持劳逸结合，驾车外出时要注意休息，保证充足的睡眠"},
+            {"id":6,"yijian":"夜间行车时间不超过22点"},
+            {"id":7,"yijian":"熟知车辆性能，按车辆的核定载质量和定员进行装载和乘员"},
+            {"id":8,"yijian":"管理人员平时加做好风险提示"},
+            {"id":9,"yijian":"加强学习教育，遵守高速公路管理的各项行车规定"},
+            {"id":10,"yijian":"出车前检察雨刷器、灯光"},
+        ],
+        columns: [
+            {
+                title: '序号',
+                field: 'id',
+            },
+            {
+                title: '详细信息',
+                field: 'yijian',
+            },
+        ]
+    });
+
+
+
+
+
+
+
+
+
+    var carCount2="";
+
+    Date.prototype.Format = function(fmt)
+    {
+        var o = {
+            "M+" : this.getMonth()+1,                 //月份
+            "d+" : this.getDate(),                    //日
+            "h+" : this.getHours(),                   //小时
+            "m+" : this.getMinutes(),                 //分
+            "s+" : this.getSeconds(),                 //秒
+            "q+" : Math.floor((this.getMonth()+3)/3), //季度
+            "S"  : this.getMilliseconds()             //毫秒
+        };
+        if(/(y+)/.test(fmt))
+            fmt=fmt.replace(RegExp.$1, (this.getFullYear()+"").substr(4 - RegExp.$1.length));
+        for(var k in o)
+            if(new RegExp("("+ k +")").test(fmt))
+                fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : (("00"+ o[k]).substr((""+ o[k]).length)));
+        return fmt;
+    };
+
+    function getRandomMaxValue(arr) {
+        var max = arr[0];
+        var len = arr.length;
+        for (var i = 1; i < len; i++){
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        return max;
+    }
+
+    function Zero(val) {
+        if (val==null||val==""||val==undefined){
+            return 0;
+        }else {
+            return val;
+        }
+    }
+
+
+
+    function settable1(id,datatable) {//违法表格创建
+        $("#"+id+"_table").bootstrapTable({
+            striped: true, //表格显示条纹
+            uniqueId: "Id",
+            pagination: false, //启动分页
+            pageSize: 5, //每页显示的记录数
+            pageNumber: 1, //当前第几页
+            pageList: [5, 10, 15, 20, 25], //记录数可选列表
+            dataField: "res",//bootstrap table 可以前端分页也可以后端分页，这里
+            data: datatable,
+            columns: [
+                {
+                    title: '违法时间',
+                    field: 'search_illegal_datetime',
+                    formatter: function (value, row, index){
+                        return new Date(value).Format("yyyy-MM-dd hh:mm:ss");
+                    }
+                },
+                {
+                    title: '违法地点',
+                    field: 'search_illegal_address'
+                },
+                {
+                    title: '违法行为',
+                    field: 'search_illegal_behaviour'
+                }
+            ]
+        });
+    }
+    function settable2(id,datatable) {//预警表格创建
+        if (id != "timeout_parking") {
+            $("#" + id + "_table").bootstrapTable({
+                striped: true, //表格显示条纹
+                uniqueId: "Id",
+                pagination: false, //启动分页
+                pageSize: 5, //每页显示的记录数
+                pageNumber: 1, //当前第几页
+                pageList: [5, 10, 15, 20, 25], //记录数可选列表
+                dataField: "res",//bootstrap table 可以前端分页也可以后端分页，这里
+                data: datatable,
+                columns: [
+                    {
+                        title: '时间',
+                        field: 'Time',
+                        formatter: function (value, row, index) {
+                            return new Date(value).Format("yyyy-MM-dd hh:mm:ss");
+                        }
+                    },
+                    {
+                        title: '速度',
+                        field: 'SUDU',
+                        formatter: function (value, row, index) {
+                            return value + "千米/小时";
+                        }
+                    },
+                    {
+                        title: '地点',
+                        field: 'DIDIAN'
+                    }
+                ]
+            });
+        }else {
+            $("#" + id + "_table").bootstrapTable({
+                striped: true, //表格显示条纹
+                uniqueId: "Id",
+                pagination: false, //启动分页
+                pageSize: 5, //每页显示的记录数
+                pageNumber: 1, //当前第几页
+                pageList: [5, 10, 15, 20, 25], //记录数可选列表
+                dataField: "res",//bootstrap table 可以前端分页也可以后端分页，这里
+                data: datatable,
+                columns: [
+                    {
+                        title: '时间',
+                        field: 'Time',
+                        formatter: function (value, row, index){
+                            return new Date(value).Format("yyyy-MM-dd hh:mm:ss");
+                        }
+                    },
+                    {
+                        title: '停车时长',
+                        field: 'SUDU',
+                        formatter:function (value, row, index) {
+                            return value/10+"小时";
+                        }
+                    },
+                    {
+                        title: '地点',
+                        field: 'DIDIAN'
+                    }
+                ]
+            });
+        }
+    }
+    //判断使用什么图，同时兼容模块显隐
+
+
+    function ChoiceEchar (id,xdata,seriesdata) {
+        if (ChoiceBer == true&&id!=undefined&&document.getElementById(id).style.display!='none')
+        {
+            var myChart = echarts.init(document.getElementById(id+"_chart"));
+            var option = {
+                tooltip: {
+                    trigger: 'axis'
+                },
+                legend: {
+                    data:['数据']
+                },
+                xAxis: [
+                    {
+                        type: 'category',
+                        data: xdata,
+//							interval: 0,
+                        axisLabel: {
+                            interval: 0,
+                            rotate: -40
+                        }
+                    }
+                ],
+                yAxis: [
+                    {
+                        type: 'value',
+                        name: '次数',
+                        min: 0,
+//                            interval: 10,
+                        axisLabel: {
+                            formatter: '{value} '
+                        }
+                    }],
+                series: [{
+                    name:'',
+                    type:'line',
+                    itemStyle : {
+                        /*设置折线颜色*/
+                        normal : {
+                            color:'#ff9a00'
+                        }
+                    },
+                    data: seriesdata
+                }]
+            };
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+            ChoiceBer=false;
+        } else if(ChoiceBer == false&&id!=undefined&&document.getElementById(id).style.display!='none'){
+            var myChart = echarts.init(document.getElementById(id+"_chart"));
+            // 指定图表的配置项和数据
+            var option = {
+                title: {
+                    text: ''
+                },
+                tooltip: {
+                    trigger: 'axis'
+                },
+                legend: {
+                    data: ['数据']
+                },
+                xAxis: {
+                    data: xdata,
+//						interval: 0,
+                    rotate: -30,
+                    margin:30,
+                    axisLabel: {
+                        interval:0,
+                        rotate:-40
+                    }
+                },
+                yAxis: {},
+                series: [{
+                    name: '风险',
+                    type: 'bar',
+                    barWidth: 30,
+                    data: seriesdata,
+                }]
+            };
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+            ChoiceBer = true;
+        }
+    }
+
+    function panduan() {
+        if (ChoiceChart1[0]==true&&
+            ChoiceChart2[0]==true&&
+            ChoiceChart3[0]==true&&
+            ChoiceChart4[0]==true&&
+            ChoiceChart5[0]==true&&
+            ChoiceChart6[0]==true&&
+            ChoiceChart7[0]==true&&
+            ChoiceChart8[0]==true&&
+            ChoiceChart9[0]==true&&
+            ChoiceChart10[0]==true&&
+            ChoiceChart11[0]==true&&
+            ChoiceChart12[0]==true&&
+            ChoiceChart13[0]==true&&
+            ChoiceChart14[0]==true&&
+            ChoiceChart15[0]==true&&
+            ChoiceChart16[0]==true&&
+            ChoiceChart17[0]==true&&
+            ChoiceChart18[0]==true&&
+            ChoiceChart19[0]==true&&
+            ChoiceChart20[0]==true&&
+            ChoiceChart21[0]==true&&
+            ChoiceChart22[0]==true&&
+            ChoiceChart23[0]==true&&
+            ChoiceChart24[0]==true&&
+            ChoiceChart25[0]==true&&
+            ChoiceChart26[0]==true&&
+            ChoiceChart27[0]==true){
+            ChoiceEchar(ChoiceChart1[1],ChoiceChart1[2],ChoiceChart1[3]);
+            ChoiceEchar(ChoiceChart2[1],ChoiceChart2[2],ChoiceChart2[3]);
+            ChoiceEchar(ChoiceChart3[1],ChoiceChart3[2],ChoiceChart3[3]);
+            ChoiceEchar(ChoiceChart4[1],ChoiceChart4[2],ChoiceChart4[3]);
+            ChoiceEchar(ChoiceChart5[1],ChoiceChart5[2],ChoiceChart5[3]);
+            ChoiceEchar(ChoiceChart6[1],ChoiceChart6[2],ChoiceChart6[3]);
+            ChoiceEchar(ChoiceChart7[1],ChoiceChart7[2],ChoiceChart7[3]);
+            ChoiceEchar(ChoiceChart8[1],ChoiceChart8[2],ChoiceChart8[3]);
+            ChoiceEchar(ChoiceChart9[1],ChoiceChart9[2],ChoiceChart9[3]);
+            ChoiceEchar(ChoiceChart10[1],ChoiceChart10[2],ChoiceChart10[3]);
+            ChoiceEchar(ChoiceChart11[1],ChoiceChart11[2],ChoiceChart11[3]);
+            ChoiceEchar(ChoiceChart12[1],ChoiceChart12[2],ChoiceChart12[3]);
+            ChoiceEchar(ChoiceChart13[1],ChoiceChart13[2],ChoiceChart13[3]);
+            ChoiceEchar(ChoiceChart14[1],ChoiceChart14[2],ChoiceChart14[3]);
+            ChoiceEchar(ChoiceChart15[1],ChoiceChart15[2],ChoiceChart15[3]);
+            ChoiceEchar(ChoiceChart16[1],ChoiceChart16[2],ChoiceChart16[3]);
+            ChoiceEchar(ChoiceChart17[1],ChoiceChart17[2],ChoiceChart17[3]);
+            ChoiceEchar(ChoiceChart18[1],ChoiceChart18[2],ChoiceChart18[3]);
+            ChoiceEchar(ChoiceChart19[1],ChoiceChart19[2],ChoiceChart19[3]);
+            ChoiceEchar(ChoiceChart20[1],ChoiceChart20[2],ChoiceChart20[3]);
+            ChoiceEchar(ChoiceChart21[1],ChoiceChart21[2],ChoiceChart21[3]);
+            ChoiceEchar(ChoiceChart22[1],ChoiceChart22[2],ChoiceChart22[3]);
+            ChoiceEchar(ChoiceChart23[1],ChoiceChart23[2],ChoiceChart23[3]);
+            ChoiceEchar(ChoiceChart24[1],ChoiceChart24[2],ChoiceChart24[3]);
+            ChoiceEchar(ChoiceChart25[1],ChoiceChart25[2],ChoiceChart25[3]);
+            ChoiceEchar(ChoiceChart26[1],ChoiceChart26[2],ChoiceChart26[3]);
+            ChoiceEchar(ChoiceChart27[1],ChoiceChart27[2],ChoiceChart27[3]);
+            riskTip();
+        }
+    }
+
+
+
+
+    function getEveryData() {
+
+
+
+
+
+
+//        $("#unit_name").html(unit_name);
+//        $("#car_license_plate").html(car_number);
+//        $("#date").html(new Date(todaytime).Format("yyyy年MM月dd日"));
+//        $("#RAI_index").html(raiApple + "%");
+//        if(raiApple==0){
+//            $("#RAI_grade").html("无");
+//            $("#RAI_grade").css("color", "#66CC33");
+//            $("#RAI").css("background-color", "#66CC33");
+//        }else if (raiApple >0&&raiApple<=20) {
+//            $("#RAI_grade").html("较小");
+//            $("#RAI_grade").css("color", "#66CC33");
+//            $("#RAI").css("background-color", "#66CC33");
+//        } else if (raiApple >20&&raiApple<=40) {
+//            $("#RAI_grade").html("一般");
+//            $("#RAI_grade").css("color", "#FFD700");
+//            $("#RAI").css("background-color", "#FFD700");
+//        } else if (raiApple >40&&raiApple<=60) {
+//            $("#RAI_grade").html("较大");
+//            $("#RAI_grade").css("color", "#FF8C00");
+//            $("#RAI").css("background-color", "#FF8C00");
+//        } else if (raiApple >60&&raiApple<=80) {
+//            $("#RAI_grade").html("重大");
+//            $("#RAI_grade").css("color", "#FF0000");
+//            $("#RAI").css("background-color", "#FF0000");
+//        } else if (raiApple >80&&raiApple<=100) {
+//            $("#RAI_grade").html("特别重大");
+//            $("#RAI_grade").css("color", "#990000");
+//            $("#RAI").css("background-color", "#990000");
+//        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+    var risk_msg=[];
+    function riskTip() {
+
+        for(var i=0;i<carCount.length;i++){
+            var hehehe = new Object();
+            hehehe.id = i + 1;
+            hehehe.yijian = carCount[i];
+            risk_msg.push(hehehe);
+        }
+
+
+
+
+//        $('#risk_table').bootstrapTable({
+//            striped: true, //表格显示条纹
+//            uniqueId: "Id",
+//            pagination: true, //启动分页
+//            pageSize: 5, //每页显示的记录数
+//            pageNumber: 1, //当前第几页
+//            pageList: [5, 10, 15, 20, 25], //记录数可选列表
+//            dataField: "res",//bootstrap table 可以前端分页也可以后端分页，这里
+//            data:[{"id":1,"yijian":"高危超速预警"}]
+//        })
+
+        /*
+
+                    if (carCount =="" && carCount2=="") {
+                        $("#msg").html(message+"无风险。");
+                    }else {
+                        $("#msg").html(message+carCount2+carCount+"。");
+					}
+
+*/
+    }
+
+
+    function goBack() {
+//            window.location.href=webPath+"/formpages/sheet2.jsp?unit_id="+unit_id+"&raiApple="+raiApple;
+        window.history.go(-1);
+    }
+
+
+</script>
+<script>
+
+
+
+</script>
+
+<!-- //smooth-scrolling-of-move-up -->
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+
+<script>
+
+
+</script>
+</body>
+</html>
+<script>
+
+
+    getEveryData();
+
+</script>
